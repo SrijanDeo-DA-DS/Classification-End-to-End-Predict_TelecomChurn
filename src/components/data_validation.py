@@ -18,7 +18,6 @@ def Data_validation(path):
     2. If directory is not empty, then name of the file matches the expected value?
     3. If name of file is correct, are there exact number of columns as expected and no entire null columns in the data?
     '''
-    
     os.chdir(path)
     
     logging.info("Data Validation started")
