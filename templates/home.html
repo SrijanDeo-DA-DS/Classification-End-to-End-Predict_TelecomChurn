@@ -1,0 +1,107 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Predict your next Customer who might Churn</h1>
+   
+       <form action="{{ url_for('predict')}}" method="post">
+        <h1>
+            <legend>Churn Predictor</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Unlimited_Data</label>
+            <select class="form-control" name="Unlimited_Data" placeholder="Enter Unlimited_Data" required>
+                <option class="placeholder" selected disabled value="">Unlimited_Data</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Streaming_TV</label>
+            <select class="form-control" name="Streaming_TV" placeholder="Enter Streaming_TV" required>
+                <option class="placeholder" selected disabled value="">Streaming_TV</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Streaming_Music</label>
+            <select class="form-control" name="Streaming_Music"
+                placeholder="Streaming_Music" required>
+                <option class="placeholder" selected disabled value="">Streaming_Music</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Streaming_Movies</label>
+            <select class="form-control" name="Streaming_Movies" placeholder="Streaming_Movies"
+                required>
+                <option class="placeholder" selected disabled value="">Streaming_Movies</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Premium_Tech_Support</label>
+            <select class="form-control" name="Premium_Tech_Support" placeholder="Premium_Tech_Support"
+                required>
+                <option class="placeholder" selected disabled value="">Premium_Tech_Support</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Number_of_Referrals</label>
+            <input class="form-control" type="number" name="Number_of_Referrals"
+                placeholder="Enter your Rating" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Tenure_in_Months</label>
+            <input class="form-control" type="number" name="Tenure_in_Months"
+                placeholder="Enter your Rating" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Total_Charges</label>
+            <input class="form-control" type="number" name="Total_Charges"
+                placeholder="Enter your Rating" min='0' max='10000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Monthly_Charge</label>
+            <input class="form-control" type="number" name="Monthly_Charge"
+                placeholder="Enter your Rating" min='0' max='1000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Total_Long_Distance_Charges</label>
+            <input class="form-control" type="number" name="Total_Long_Distance_Charges"
+                placeholder="Enter your Rating" min='0' max='10000' />
+        </div>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict Customer Status" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>

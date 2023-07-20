@@ -2,3 +2,9 @@ pandas
 numpy
 seaborn
 scikit-learn
+xgboost
+keras
+tensorflow
+flask
+jsonify
+requests
